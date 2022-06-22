@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/8.4.6/css/intlTelInput.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="http://localhost:8080/simple-vue-html-axios-demo/assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="http://localhost:8080/simple-vue-html-axios-demo/assets/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="http://localhost:8080/simple-vue-html-axios-demo/assets/css/main2.css" />
+  
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vuex/4.0.2/vuex.global.js" integrity="sha512-gQOia3DNhTH7NddBFw36zq5kyHx8viwZj0bC4I6Vx2+L3twl7WoRZ5FbiPmPKdj/uh9jeG1IB8hF/gjayPavig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.js" integrity="sha512-uplugzeh2/XrRr7RgSloGLHjFV0b4FqUtbT5t9Sa/XcilDr1M3+88u/c+mw6+HepH7M2C5EVmahySsyilVHI/A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+
+<div id="app">
+  <div class="content-wrapper">
+    <div class="wrapper">
+      <div class="cms-body">
+        <nav class="side-navbar sb-container myContainer">
+          <navigation-component></navigation-component>
+        </nav>
+        
+        <div class="page">
+          <header-component></header-component>
+          <div class="page-content">
+            <div class="box">
+              <h2>Demo App to Import Components and Content Library</h2>
+            </div>
+            <div class="datatableSection pt-0">
+              <div class="card cardTable">
+                <div class="card-body">
+                  <content-library></content-library>
+                </div>
+              </div>
+            </div>
+            <last-component></last-component>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+import HeaderComponent from 'http://localhost:8080/simple-vue-html-axios-demo/header-component.js';
+import NavigationComponent from 'http://localhost:8080/simple-vue-html-axios-demo/navigation-component.js';
+import LastComponent from 'https://storecms-dev.allthingsott.com/products/layouts/Footer.vue.js';
+import ContentLibrary from './content-library.js';
+
+  const { createApp } = Vue
+
+  createApp({
+    data() {
+      return {
+        message: 'Hello Vue!',
+      }
+    },
+    components: {
+	    HeaderComponent,
+      LastComponent,
+      NavigationComponent,
+      ContentLibrary,
+    }
+  }).mount('#app')
+</script>
+
+</body>
+</html>
