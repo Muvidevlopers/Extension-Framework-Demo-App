@@ -7,6 +7,11 @@ To tailor experiences to their specific needs, partners/customers/developers use
 
 No need to depend on any installation process with the setup which you are going to build and deploy with your development. So don’t worry and just start using MUVI core components into your application to work around with the MUVI environment and take an exact look and feel into your extension framework features via importing core components(Header, Footer, Navigation, etc.) into your development environment from MUVI CMS.
 
+```
+git clone https://github.com/Muvidevlopers/Extension-Framework-Demo-App.git
+Run the application via VS code editor using Live Server or from your project root path to development server
+```
+
 ## How to use / Import Common Components
 Below are the steps to create and use any core components while building your extension in the MUVI platform.
 
